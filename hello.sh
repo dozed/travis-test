@@ -6,6 +6,8 @@ echo "hello.."
 
 ls -al
 
+cd scalatra
+
 sbt unidoc
 
 ls -al target
