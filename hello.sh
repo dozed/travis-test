@@ -31,7 +31,10 @@ ls -al
 
 # Build scalatra site
 cd scalatra-website
-git checkout -b feature/hugo
+git checkout origin/feature/hugo
+
+ls -al
+
 hugo -b https://takezoe.github.io/scalatra-website/ -d gh-pages
 
 ls -al
