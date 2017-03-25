@@ -6,8 +6,9 @@ jdk:
 env:
   global:
   - ENCRYPTION_LABEL: "abeef26245c2"
-sudo: required
 before_install:
   - git clone https://github.com/scalatra/scalatra-website.git
   - git clone https://github.com/scalatra/scalatra.git
+  - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
+  - sudo dpkg -i hugo_0.19-64bit.deb
 script: ./hello.sh
