@@ -68,19 +68,26 @@ rsync -av gh-pages/* ../travis-test
 
 cd ..
 
+
+# Build scalatra apidocs
+cd scalatra
+
+git checkout origin/2.5.x
+sbt unidoc
+
+# ls -al target
+# ls -al target/scala-2.12
+# ls -al target/scala-2.12/unidoc
+
+mkdir -p ../travis-test/apidocs
+rsync -av target/scala-2.12/unidoc/* ../travis-test/apidocs
+
+cd ..
+
+
 # Commit and push changes
 cd travis-test
 ls -al
 git add .
 git commit -m "Built gh-pages"
 git push origin gh-pages
-
-# Build scalatra apidocs
-# cd ~/scalatra
-#
-# git checkout origin/2.5.x
-# sbt unidoc
-#
-# ls -al target
-# ls -al target/scala-2.12
-# ls -al target/scala-2.12/unidoc
