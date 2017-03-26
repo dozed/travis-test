@@ -24,17 +24,18 @@ git config --global user.email "ci@scalatra.org"
 
 
 ls -al
-# total 5420
-# drwxrwxr-x  5 travis travis    4096 Mar 25 23:44 .
-# drwxrwxr-x  3 travis travis    4096 Mar 25 23:44 ..
-# -rw-------  1 travis travis    1675 Mar 25 23:44 deploy_key
-# -rw-rw-r--  1 travis travis    1680 Mar 25 23:44 deploy_key.enc
-# drwxrwxr-x  8 travis travis    4096 Mar 25 23:44 .git
-# -rwxrwxr-x  1 travis travis     889 Mar 25 23:44 hello.sh
+# total 5424
+# drwxrwxr-x  6 travis travis    4096 Mar 26 11:57 .
+# drwxrwxr-x  3 travis travis    4096 Mar 26 11:57 ..
+# -rw-------  1 travis travis    1675 Mar 26 11:57 deploy_key
+# -rw-rw-r--  1 travis travis    1680 Mar 26 11:57 deploy_key.enc
+# drwxrwxr-x  8 travis travis    4096 Mar 26 11:57 .git
+# -rwxrwxr-x  1 travis travis    1899 Mar 26 11:57 hello.sh
 # -rw-rw-r--  1 travis travis 5511722 Feb 27 12:53 hugo_0.19-64bit.deb
-# drwxrwxr-x 25 travis travis    4096 Mar 25 23:44 scalatra
-# drwxrwxr-x 11 travis travis    4096 Mar 25 23:44 scalatra-website
-# -rw-rw-r--  1 travis travis     380 Mar 25 23:44 .travis.yml
+# drwxrwxr-x 25 travis travis    4096 Mar 26 11:57 scalatra
+# drwxrwxr-x 11 travis travis    4096 Mar 26 11:57 scalatra-website
+# drwxrwxr-x  3 travis travis    4096 Mar 26 11:57 travis-test
+# -rw-rw-r--  1 travis travis     435 Mar 26 11:57 .travis.yml
 
 # pwd
 # /home/travis/build/dozed/travis-test
