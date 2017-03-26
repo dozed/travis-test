@@ -56,7 +56,7 @@ git checkout origin/feature/hugo
 
 ls -al
 
-hugo -b https://takezoe.github.io/scalatra-website/ -d gh-pages
+hugo -b https://takezoe.github.io/scalatra-website/ -d gh-pages || true
 
 ls -al
 ls -al gh-pages
