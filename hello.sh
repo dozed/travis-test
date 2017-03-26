@@ -23,6 +23,7 @@ git config --global user.name "Travis CI"
 git config --global user.email "ci@scalatra.org"
 
 git clone git@github.com:dozed/travis-test.git
+rm -rf travis-test/*
 
 
 ls -al
@@ -59,6 +60,7 @@ git checkout origin/feature/hugo
 
 ls -al
 
+# TODO remove
 hugo -b https://takezoe.github.io/scalatra-website/ -d gh-pages || true
 
 ls -al
@@ -75,12 +77,15 @@ cd scalatra
 git checkout origin/2.5.x
 sbt unidoc
 
-# ls -al target
-# ls -al target/scala-2.12
-# ls -al target/scala-2.12/unidoc
+mkdir -p ../travis-test/apidocs/2.5
+rsync -av target/scala-2.12/unidoc/* ../travis-test/apidocs/2.5
 
-mkdir -p ../travis-test/apidocs
-rsync -av target/scala-2.12/unidoc/* ../travis-test/apidocs
+
+git checkout origin/2.4.x
+sbt unidoc
+
+mkdir -p ../travis-test/apidocs/2.4
+rsync -av target/scala-2.12/unidoc/* ../travis-test/apidocs/2.4
 
 cd ..
 
@@ -91,3 +96,6 @@ ls -al
 git add .
 git commit -m "Built gh-pages"
 git push origin gh-pages
+
+
+echo "Done"
