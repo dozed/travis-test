@@ -100,6 +100,8 @@ cd ..
 # Commit and push changes
 cd travis-test
 ls -al
+ls -al apidocs
+git rm --cached -r .
 git add --all .
 git commit -m "Built gh-pages"
 git push origin gh-pages
