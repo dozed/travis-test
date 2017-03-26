@@ -36,20 +36,22 @@ ls -al
 # drwxrwxr-x 11 travis travis    4096 Mar 25 23:44 scalatra-website
 # -rw-rw-r--  1 travis travis     380 Mar 25 23:44 .travis.yml
 
+# pwd
+# /home/travis/build/dozed/travis-test
 
 
 echo "Build"
 
-pwd
 
 # Final site is in travis-test/gh-pages
-cd ~/travis-test
+cd travis-test
 git checkout gh-pages
 
+cd ..
 
 
 # Build scalatra site
-cd ~/scalatra-website
+cd scalatra-website
 git checkout origin/feature/hugo
 
 ls -al
@@ -59,13 +61,13 @@ hugo -b https://takezoe.github.io/scalatra-website/ -d gh-pages
 ls -al
 ls -al gh-pages
 
-rsync -av gh-pages ~/travis-test/gh-pages
+rsync -av gh-pages/* ../travis-test
 
-ls -al ~/travis-test/gh-pages
-
+cd ..
 
 # Commit and push changes
-cd ~/travis-test
+cd travis-test
+ls -al
 git add .
 git commit -m "Built gh-pages"
 git push origin gh-pages
