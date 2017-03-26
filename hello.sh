@@ -23,7 +23,6 @@ git config --global user.name "Travis CI"
 git config --global user.email "ci@scalatra.org"
 
 git clone git@github.com:dozed/travis-test.git
-rm -rf travis-test/*
 
 
 ls -al
@@ -51,6 +50,9 @@ echo "Build"
 cd travis-test
 git checkout gh-pages
 
+# always build full site
+rm -rf travis-test/*
+
 cd ..
 
 
@@ -71,7 +73,7 @@ rsync -av gh-pages/* ../travis-test
 cd ..
 
 
-# Build scalatra apidocs
+# Build scalatra apidocs v2.4.x
 cd scalatra
 
 git checkout origin/2.5.x
@@ -80,6 +82,11 @@ sbt unidoc
 mkdir -p ../travis-test/apidocs/2.5
 rsync -av target/scala-2.12/unidoc/* ../travis-test/apidocs/2.5
 
+cd ..
+
+
+# Build scalatra apidocs v2.4.x
+cd scalatra
 
 git checkout origin/2.4.x
 sbt unidoc
