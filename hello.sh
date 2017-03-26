@@ -40,6 +40,7 @@ ls -al
 
 echo "Build"
 
+pwd
 
 # Final site is in travis-test/gh-pages
 cd ~/travis-test
