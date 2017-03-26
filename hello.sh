@@ -22,6 +22,8 @@ ssh-add deploy_key
 git config --global user.name "Travis CI"
 git config --global user.email "ci@scalatra.org"
 
+git clone git@github.com:dozed/travis-test.git
+
 
 ls -al
 # total 5424

@@ -9,7 +9,6 @@ env:
 before_install:
   - git clone https://github.com/scalatra/scalatra-website.git
   - git clone https://github.com/scalatra/scalatra.git
-  - git clone git@github.com:dozed/travis-test.git
   - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
   - sudo dpkg -i hugo_0.19-64bit.deb
 script: ./hello.sh
