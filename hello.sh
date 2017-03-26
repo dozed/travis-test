@@ -3,7 +3,7 @@
 set -ev
 
 # Check dependencies
-rsync -v
+# rsync -v
 
 
 echo "Config"
