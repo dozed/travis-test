@@ -73,7 +73,7 @@ rsync -av gh-pages/* ../travis-test
 cd ..
 
 
-# Build scalatra apidocs v2.4.x
+# Build scalatra apidocs v2.5.x
 cd scalatra
 
 git checkout origin/2.5.x
@@ -100,7 +100,7 @@ cd ..
 # Commit and push changes
 cd travis-test
 ls -al
-git add .
+git add --all .
 git commit -m "Built gh-pages"
 git push origin gh-pages
 
