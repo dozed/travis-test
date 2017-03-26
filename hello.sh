@@ -51,7 +51,7 @@ cd travis-test
 git checkout gh-pages
 
 # always build full site
-rm -rf travis-test/*
+rm -rf *
 
 cd ..
 
